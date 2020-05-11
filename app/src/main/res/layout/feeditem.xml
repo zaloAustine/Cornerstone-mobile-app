@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="8dp"
+    android:layout_margin="12dp"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <com.teleclinic.bulent.smartimageview.SmartImageViewLayout
+            android:id="@+id/images"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            app:shape="SQUARE"/>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/description"
+            android:layout_marginLeft="12dp"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="12dp"
+            android:fontFamily="@font/andika"
+            android:text="recommendation of the NC Governor, we are canceling church at all of our physical locations. Join us online Sunday at 9:30AM, 11:30AM, 2:00PM, 5:00PM, 8:00PM  10:00PM EDT"
+            android:textColor="@android:color/black" />
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@android:color/white"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center|left"
+            android:id="@+id/more"
+            android:elevation="0dp"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:drawableRight="@drawable/more"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center|left"
+            android:text="View More"/>
+    </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

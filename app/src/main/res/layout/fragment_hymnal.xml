@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".fragments.HymnalFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_margin="12dp"
+        app:cardCornerRadius="12dp"
+        android:layout_height="50dp">
+
+        <EditText
+            android:background="@android:color/white"
+            android:id="@+id/inputSearch"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="12dp"
+            android:hint="Search Song.."
+            android:inputType="textVisiblePassword"/>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:background="@android:color/darker_gray"
+        android:layout_height="match_parent"
+        android:id="@+id/song"/>
+
+</LinearLayout>

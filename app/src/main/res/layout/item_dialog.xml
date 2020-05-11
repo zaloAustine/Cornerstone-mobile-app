@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <CheckBox
+                android:text="Gods Tithe"
+                android:textSize="20sp"
+                android:layout_margin="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/titheC"/>
+            <CheckBox
+                android:text="Combine Offering"
+                android:textSize="20sp"
+                android:layout_margin="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/offeringC"/>
+            <CheckBox
+                android:text="Development"
+                android:textSize="20sp"
+                android:layout_margin="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/developmentC"/>
+            <CheckBox
+                android:text="Mission"
+                android:textSize="20sp"
+                android:layout_margin="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/missionC"/>
+            <CheckBox
+                android:text="Youth Kitty"
+                android:textSize="20sp"
+                android:layout_margin="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/youthC"/>
+            <CheckBox
+                android:text="Building Devlopment"
+                android:textSize="20sp"
+                android:layout_margin="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/buildingC"/>
+            <CheckBox
+                android:text="Land"
+                android:textSize="20sp"
+                android:layout_margin="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/landC"/>
+            <CheckBox
+                android:text="Evangelism Local church"
+                android:textSize="20sp"
+                android:layout_margin="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/evaLC"/>
+            <CheckBox
+                android:text="Evangelism Conference"
+                android:textSize="20sp"
+                android:layout_margin="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/evacC"/>
+            <CheckBox
+                android:text="Recurrent Expenditure"
+                android:textSize="20sp"
+                android:layout_margin="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/expenditureC"/>
+            <CheckBox
+                android:text="Station Development"
+                android:textSize="20sp"
+                android:layout_margin="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/stationC"/>
+            <CheckBox
+                android:text="Camp meeting Expenses"
+                android:textSize="20sp"
+                android:layout_margin="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/campExpC"/>
+            <CheckBox
+                android:text="Camp meeting Offering"
+                android:textSize="20sp"
+                android:layout_margin="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/campC"/>
+            <CheckBox
+                android:text="benevolence"
+                android:textSize="20sp"
+                android:layout_margin="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/benevolenceC"/>
+            <CheckBox
+                android:text="Children Kitty"
+                android:textSize="20sp"
+                android:layout_margin="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/childrenC"/>
+            <CheckBox
+                android:text="Lunch Kitty"
+                android:textSize="20sp"
+                android:layout_margin="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lunchC"/>
+            <CheckBox
+                android:text="Others"
+                android:textSize="20sp"
+                android:layout_margin="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/othersC"/>
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+</LinearLayout>

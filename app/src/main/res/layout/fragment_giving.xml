@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Giving"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_margin="12dp"
+            android:textSize="30sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:textSize="16sp"
+            android:layout_height="wrap_content"
+            android:text="See What God can Do throught your generosity"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginLeft="12dp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView2"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="8dp"
+            android:elevation="4dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialCardView"
+            app:layout_constraintVertical_bias="0.0">
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_margin="8dp"
+                    android:id="@+id/give"
+                    android:text="Give Now"
+                    android:textColor="@android:color/white"
+                    app:cornerRadius="8dp" />
+
+                <ImageView
+                    android:id="@+id/main_image"
+                    android:src="@drawable/give2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:text="Proverb 3:9-10"
+            android:textColor="@color/colorAccent"
+            android:layout_marginLeft="12dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:textSize="16sp"
+            android:layout_height="wrap_content"
+            android:text="Honor the LORD with your wealth, with the firstfruits of all your crops. 10 then your barns will be filled to overflowing and your vats will brim over with wine."
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginLeft="12dp" />
+
+</LinearLayout>
+
+
+</ScrollView>
