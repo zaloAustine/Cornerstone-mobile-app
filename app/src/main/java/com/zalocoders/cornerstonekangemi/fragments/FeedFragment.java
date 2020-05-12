@@ -13,6 +13,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 
 import com.zalocoders.cornerstonekangemi.Adapters.NewsAdapter;
@@ -29,6 +30,7 @@ public class FeedFragment extends Fragment {
     NewsAdapter mNewsAdapter;
     View v;
     RecyclerView news_recyclerview;
+    SwipeRefreshLayout swipeRefreshLayout;
     Context mContext;
     List<News> mNews;
 
@@ -47,7 +49,7 @@ public class FeedFragment extends Fragment {
         mViewModel = ViewModelProviders.of(this).get(FeedViewModel.class);
         setUpRecyclerView();
 
-
+        swipeRefresh();
         return v;
     }
 
@@ -69,21 +71,32 @@ public class FeedFragment extends Fragment {
         news_recyclerview.setAdapter(mNewsAdapter);
         loadData();
 
-
     }
 
     private void loadData() {
         mViewModel.getNews().observe(getViewLifecycleOwner(), new Observer<List<News>>() {
             @Override
             public void onChanged(List<News> news) {
+                mNews.clear();
                 mNews.addAll(news);
                 mNewsAdapter.notifyDataSetChanged();
+                swipeRefreshLayout.setRefreshing(false);
+
             }
         });
     }
 
 
+    private void swipeRefresh(){
+        swipeRefreshLayout = v.findViewById(R.id.swipe);
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                loadData();
+            }
+        });
 
 
 
+    }
 }

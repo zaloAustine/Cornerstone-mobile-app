@@ -157,41 +157,6 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="12dp" />
 
-    <com.jaredrummler.materialspinner.MaterialSpinner
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:background="@android:color/white"
-        android:gravity="center|left"
-        android:layout_gravity="center"
-        android:textSize="15sp"
-        android:id="@+id/spinnerItem2"
-        android:layout_marginBottom="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginRight="12dp"
-        android:textColorHint="@android:color/darker_gray"
-        android:textColor="@android:color/black"
-        android:hint="Select Item 2"
-        app:ms_hint_color="@android:color/darker_gray" />
-
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/edittextItem2"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:hint="0.0"
-        android:inputType="number"
-        android:layout_margin="12dp"
-        android:visibility="gone"
-        android:imeOptions="actionNext"
-        android:nextFocusForward="@+id/lastname_tv"
-        android:paddingLeft="12dp"
-        android:singleLine="true"
-        android:background="@android:color/white"
-        android:textColor="@android:color/black"
-        android:textColorHint="@android:color/darker_gray"
-        app:layout_constraintTop_toBottomOf="@+id/lastname"
-        tools:layout_editor_absoluteX="16dp" />
-
 
 
     <Button

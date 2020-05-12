@@ -12,6 +12,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.devbrackets.android.exomedia.core.api.VideoViewApi;
 import com.devbrackets.android.exomedia.listener.OnPreparedListener;
@@ -32,6 +33,7 @@ public class SermonFragment extends Fragment {
     RecyclerView sermons;
     List<Sermon> mSermonList;
     SermonAdapter adapter;
+    SwipeRefreshLayout swipeRefreshLayout;
 
     public static SermonFragment newInstance() {
         return new SermonFragment();
@@ -49,6 +51,10 @@ public class SermonFragment extends Fragment {
         setUpRecyclerView();
 
         configureVideo();
+
+        swipeRefresh();
+
+
         return v;
     }
 
@@ -80,8 +86,11 @@ public class SermonFragment extends Fragment {
         mViewModel.getSermons().observe(getViewLifecycleOwner(), new Observer<List<Sermon>>() {
             @Override
             public void onChanged(List<Sermon> sermons) {
+                mSermonList.clear();
                 mSermonList.addAll( sermons);
                 adapter.notifyDataSetChanged();
+                swipeRefreshLayout.setRefreshing(false);
+
 
             }
         });
@@ -102,6 +111,17 @@ public class SermonFragment extends Fragment {
 
     }
 
+    private void swipeRefresh(){
+        swipeRefreshLayout = v.findViewById(R.id.swipe);
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                LoadSermons();
+            }
+        });
 
+
+
+    }
 
 }
