@@ -6,6 +6,7 @@ import com.zalocoders.cornerstonekangemi.Models.Item;
 import com.zalocoders.cornerstonekangemi.Models.News;
 import com.zalocoders.cornerstonekangemi.Models.Sermon;
 import com.zalocoders.cornerstonekangemi.models.CommonResponse;
+import com.zalocoders.cornerstonekangemi.models.Discover;
 import com.zalocoders.cornerstonekangemi.models.PayItem;
 
 import org.json.JSONObject;
@@ -32,6 +33,12 @@ public interface CornerstoneApi {
 
     @GET("items")
     Call<List<Item>> getItems();
+
+    @GET("Viewzoom")
+    Call<Discover> getZoom();
+
+    @GET("ViewBulletin")
+    Call<Discover> getBuletin();
 
 
     @POST("postRecord2")

@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.zalocoders.cornerstonekangemi">
+
+    <supports-screens
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:xlargeScreens="true" />
 
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -9,29 +17,30 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
+        android:usesCleartextTraffic="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity
-            android:theme="@style/AppTheme"
-            android:name="com.zalocoders.cornerstonekangemi.activities.GivingActivity"
-            android:windowSoftInputMode="adjustResize"></activity>
-
-        <activity android:name="com.zalocoders.cornerstonekangemi.activities.ListenSermonActivity" />
-        <activity
-            android:name="com.zalocoders.cornerstonekangemi.activities.ViewSongActivity"
-            android:theme="@style/Theme.MaterialComponents" />
-        <activity
-            android:name="com.zalocoders.cornerstonekangemi.activities.ViewImageActivity"
-            android:theme="@style/Theme.MaterialComponents" />
-        <activity
-            android:name="com.zalocoders.cornerstonekangemi.activities.MainActivity"
-            android:theme="@style/AppTheme"
-            android:windowSoftInputMode="stateHidden"/>
 
         <activity
-            android:name="com.zalocoders.cornerstonekangemi.activities.SplashScreen"
+            android:name=".activities.GivingActivity"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".activities.ListenSermonActivity" />
+        <activity
+            android:name=".activities.ViewSongActivity"
+            android:theme="@style/Theme.MaterialComponents" />
+        <activity
+            android:name=".activities.ViewImageActivity"
+            android:theme="@style/Theme.MaterialComponents" />
+        <activity
+            android:name=".activities.MainActivity"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activities.SplashScreen"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden">
             <intent-filter>
@@ -40,8 +49,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
     </application>
 
 </manifest>
